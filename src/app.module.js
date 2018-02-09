@@ -10,7 +10,16 @@ function($stateProvider,$urlRouterProvider){
     $stateProvider.state({
         name:'home',
         url:'/',
-        component :'productList'
+        component :'productList',
+        resolve: {
+            products: ['ProductService', function(ProductService){
+                return ProductService
+                        .getProducts()
+                        .then(function(res){
+                            return res.data;
+                        });
+            }]
+        }
         
     });
     $stateProvider.state({
@@ -21,7 +30,7 @@ function($stateProvider,$urlRouterProvider){
     });
     $stateProvider.state({
         name:'productDetails',
-        url:'/product-details',
+        url:'/product-details/{productId}',
         component :'productDetails'
         
     });
