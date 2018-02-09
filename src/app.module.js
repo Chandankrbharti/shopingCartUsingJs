@@ -13,5 +13,23 @@ function($stateProvider,$urlRouterProvider){
         component :'productList'
         
     });
+    $stateProvider.state({
+        name:'addProduct',
+        url:'/add-product',
+        component :'addProduct'
+        
+    });
+    $stateProvider.state({
+        name:'productDetails',
+        url:'/product-details',
+        component :'productDetails'
+        
+    });
+    $stateProvider.state({
+        name:'cart',
+        url:'/cart',
+        component :'cart'
+        
+    });
     $urlRouterProvider.otherwise('/');
 }]);
