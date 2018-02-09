@@ -1,5 +1,9 @@
 {
-    "products": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
+    "products": 
+    [
+      { "id": 1, 
+        "title": "Iphone",
+        "author": "typicode"
+      }
     ]
 }
