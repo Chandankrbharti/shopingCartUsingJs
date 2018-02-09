@@ -1,7 +1,8 @@
 angular.module('shoppingcart.product')
-.controller('productList',['ProductService',
+.controller('productListCtrl',['ProductService',
 function(ProductService){
     var self=this;
+    self.products=[];
   this.$onInit=function(){
     ProductService.getProducts().then(function(result){
         self.products=result.data;
@@ -10,5 +11,6 @@ function(ProductService){
     
 }])
     .component('productList', {
-        templateUrl: 'src/product/components/product-list/list-product.component.html'
+        templateUrl: 'src/product/components/product-list/list-product.component.html',
+        controller:'productListCtrl'
     });
