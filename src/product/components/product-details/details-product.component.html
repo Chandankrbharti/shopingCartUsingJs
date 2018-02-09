@@ -1,1 +1,11 @@
 <h1>product details</h1>
+
+
+    <h3 ng-bind="$ctrl.products.title"></h3>
+    <img width="100" height="100" ng-src="{{$ctrl.products.imgUrl}}" alt="">
+    <div>
+        <span class="price" ng-bind="$ctrl.products.price"></span>        
+    </div>
+    <a ui-sref="productDetails({productId: $ctrl.products.id})">view details</a>
+    
+</div>

@@ -31,7 +31,15 @@ function($stateProvider,$urlRouterProvider){
     $stateProvider.state({
         name:'productDetails',
         url:'/product-details/{productId}',
-        component :'productDetails'
+        component :'productDetails',
+        resolve: {
+            products: ['ProductService','$transition$',
+             function(ProductService,$transition$){
+                var productId=$transition$.params().productId;
+                return ProductService.getProductDetails(productId);
+                        
+            }]
+        }
         
     });
     $stateProvider.state({
