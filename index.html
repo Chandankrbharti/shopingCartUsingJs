@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<app></app>
+        {{parentvalue}}
+        <input type="text" ng-model="parentvalue">
+    
+        <div my-first></div>
+        <my-first></my-first>
+        <app></app>
+  
 
 
 
@@ -19,6 +25,7 @@
         <script src="src/app.constant.js"></script>
         <script src="src/cart/cart.module.js"></script>
         <script src="src/shared/shared.module.js"></script>
+        <script src="src/shared/myFirstDirectives.js"></script>
         <script src="src/app.component.js"></script>
         <script src="src/cart/components/cart.component.js"></script>
         <script src="src/product/product.module.js"></script>  
